@@ -1,5 +1,6 @@
 print("loading")
-repeat until  game:IsLoaded() 
+repeat wait()
+until  game:IsLoaded() 
 print("loaded")
 
 _G.AutoFarm1 = false
