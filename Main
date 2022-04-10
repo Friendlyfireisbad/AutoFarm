@@ -1,8 +1,78 @@
 print("loading")
   repeat wait(1)
 until  game:IsLoaded() 
+
 print("loaded")
 
+
+wait(4)
+ local New_CFrame = game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.CFrame
+    local ts = game:GetService("TweenService")
+    local char = game.Players.LocalPlayer.Character
+    
+    local part = char.HumanoidRootPart
+    local ti = TweenInfo.new(1, Enum.EasingStyle.Linear)
+    local tp = {CFrame = New_CFrame * CFrame.new(2, 0, 0)}
+    local tween = ts:Create(part, ti, tp)
+    tween:Play()
+    tween.Completed:wait() 
+    wait(0.5)
+
+--while _G.AutoFarm1 == true do 
+fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.Pickup.Boxes.ClickDetector, math.huge)
+fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.Pickup.Boxes.ClickDetector, math.huge)
+
+
+loadstring(Game:HttpGet("https://pastebin.com/raw/Vq3i2e6V"))()
+wait(5)
+
+
+
+
+
+local TeleportService = game:GetService("TeleportService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local Rejoin = coroutine.create(function()
+    local Success, ErrorMessage = pcall(function()
+        TeleportService:Teleport(game.PlaceId, LocalPlayer)
+    end)
+
+    if ErrorMessage and not Success then
+        warn(ErrorMessage)
+    end
+end)
+
+coroutine.resume(Rejoin)
+
+
+
+
+
+
+local queue_on_tp = (syn and syn.queue_on_teleport) or queue_on_teleport
+
+game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
+    if State == Enum.TeleportState.Started then 
+  
+        queue_on_tp([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Friendlyfireisbad/AutoFarm/main/Main"))()]])      
+    end
+    
+end)
+
+game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(Kick)
+    if Kick.Name == 'ErrorPrompt' and Kick:FindFirstChild('MessageArea') and Kick.MessageArea:FindFirstChild("ErrorFrame") then
+        game:GetService("TeleportService"):Teleport(game.PlaceId)
+    end
+end)
+
+print("loading")
+  repeat wait(1)
+until  game:IsLoaded() 
+print("loaded")
+
+_G.AutoFarm1 = false
 
  local New_CFrame = game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.CFrame
     local ts = game:GetService("TweenService")
