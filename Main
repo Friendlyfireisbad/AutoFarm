@@ -1,5 +1,7 @@
 print("loading")
-
+  repeat wait(1)
+until  game:IsLoaded() 
+print("loaded")
 
 _G.AutoFarm1 = false
 
