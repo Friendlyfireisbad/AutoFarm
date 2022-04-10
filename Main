@@ -1,9 +1,6 @@
-wait(2)
 
-if game:IsLoaded() then
 
-print("Loaded")
-end
+
 
 _G.AutoFarm1 = false
 
