@@ -1,10 +1,10 @@
 
 
 
-
-
-_G.AutoFarm1 = false
+wait(2)
 if game:IsLoaded() then
+_G.AutoFarm1 = false
+
  local New_CFrame = game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.CFrame
     local ts = game:GetService("TweenService")
     local char = game.Players.LocalPlayer.Character
