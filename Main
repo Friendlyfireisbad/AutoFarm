@@ -1,14 +1,8 @@
-_G.Loaded = false
-wait(2)
-
-if game:IsLoaded() then
-_G.Loaded = true
-end
 
 
 
 
-if _G.Loaded == true then 
+
 _G.AutoFarm1 = false
 
  local New_CFrame = game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.CFrame
@@ -59,8 +53,10 @@ coroutine.resume(Rejoin)
 local queue_on_tp = (syn and syn.queue_on_teleport) or queue_on_teleport
 
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-    if State == Enum.TeleportState.Started then      
+    if State == Enum.TeleportState.Started then   
+         if game:IsLoaded() then    
         queue_on_tp([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Friendlyfireisbad/AutoFarm/main/Main"))()]])
+       end
     end
 end)
 
@@ -69,4 +65,4 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
         game:GetService("TeleportService"):Teleport(game.PlaceId)
     end
 end)
-end
+
