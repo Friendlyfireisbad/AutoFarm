@@ -3,7 +3,6 @@ print("loading")
 until  game:IsLoaded() 
 print("loaded")
 
-_G.AutoFarm1 = false
 
  local New_CFrame = game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.CFrame
     local ts = game:GetService("TweenService")
