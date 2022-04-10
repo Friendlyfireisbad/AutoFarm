@@ -1,7 +1,5 @@
 print("loading")
-repeat wait()
-until  game:IsLoaded() 
-print("loaded")
+
 
 _G.AutoFarm1 = false
 
@@ -53,9 +51,13 @@ coroutine.resume(Rejoin)
 local queue_on_tp = (syn and syn.queue_on_teleport) or queue_on_teleport
 
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
-    if State == Enum.TeleportState.Started then   
+    if State == Enum.TeleportState.Started then 
+    repeat wait()
+until  game:IsLoaded() 
+print("loaded")
         queue_on_tp([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Friendlyfireisbad/AutoFarm/main/Main"))()]])      
     end
+    
 end)
 
 game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(Kick)
