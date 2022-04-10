@@ -1,7 +1,14 @@
+_G.Loaded = false
+wait(2)
+
+if game:IsLoaded() then
+_G.Loaded = true
+end
 
 
 
 
+if _G.Loaded == true then 
 _G.AutoFarm1 = false
 
  local New_CFrame = game:GetService("Workspace").Map.Jobs.Bodega.DropOff.Supply.CFrame
@@ -62,4 +69,4 @@ game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(func
         game:GetService("TeleportService"):Teleport(game.PlaceId)
     end
 end)
-
+end
