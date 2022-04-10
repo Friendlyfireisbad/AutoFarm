@@ -1,6 +1,6 @@
 
-
 if game:IsLoaded() then
+
 
 _G.AutoFarm1 = false
 
@@ -57,4 +57,3 @@ game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     end
 end)
 end
-
