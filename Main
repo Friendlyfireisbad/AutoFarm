@@ -16,14 +16,14 @@ _G.AutoFarm1 = false
     tween.Completed:wait() 
     wait(0.5)
 
-while _G.AutoFarm1 == true do 
+--while _G.AutoFarm1 == true do 
 fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.Pickup.Boxes.ClickDetector, math.huge)
 fireclickdetector(game:GetService("Workspace").Map.Jobs.Bodega.Pickup.Boxes.ClickDetector, math.huge)
 
 
 loadstring(Game:HttpGet("https://pastebin.com/raw/Vq3i2e6V"))()
 wait(5)
-end
+
 
 
 
@@ -57,8 +57,4 @@ game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
     end
 end)
 
-game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(Kick)
-    if Kick.Name == 'ErrorPrompt' and Kick:FindFirstChild('MessageArea') and Kick.MessageArea:FindFirstChild("ErrorFrame") then
-        game:GetService("TeleportService"):Teleport(game.PlaceId)
-    end
-end)
+
