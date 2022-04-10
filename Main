@@ -1,6 +1,6 @@
 
 
-
+if game:IsLoaded() then
 
 _G.AutoFarm1 = false
 
@@ -56,5 +56,5 @@ game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
         queue_on_tp([[loadstring(game:HttpGet("https://raw.githubusercontent.com/Friendlyfireisbad/AutoFarm/main/Main"))()]])      
     end
 end)
-
+end
 
